@@ -1,0 +1,40 @@
+{
+"polymarket": {
+"markets": [
+{
+"name": "Will Trump try to fire Powell in 2025?",
+"currentPrice": "13% chance Yes No",
+"volume": "$102k Vol"
+},
+{
+"name": "Jerome Powell out as Fed Chair in 2025?",
+"currentPrice": "9% chance Yes No",
+"volume": "$9m Vol"
+},
+{
+"name": "Bitcoin above ___ on August 27?",
+"currentPrice": ">106k 93% Yes 93% No 7%",
+"volume": "$1m Vol"
+},
+{
+"name": "What price will Ethereum hit in 2025?",
+"currentPrice": "$10,000 12% Yes 12% No 88%",
+"volume": "$17m Vol"
+},
+{
+"name": "What price will Bitcoin hit in 2025?",
+"currentPrice": "$170,000 15% Yes 15% No 85%",
+"volume": "$24m Vol"
+}
+]
+},
+"kalshi": {
+"markets": [
+{
+"name": "Event",
+"currentPrice": "Price",
+"volume": "Volume"
+}
+]
+}
+}

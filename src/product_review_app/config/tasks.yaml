@@ -1,0 +1,41 @@
+data_collection_task:
+  description: >
+    Navigate to at least two gambling and prediction market websites (e.g., polymarket.com, kalshi.com, etc.) and scrape all available product listings, including market name, current price, and any other relevant details.
+  expected_output: >
+    A JSON object containing the raw, un-processed data scraped from all target websites. The data from each site should be clearly separated within the JSON structure.
+  agent: data_collector
+
+data_analysis_task:
+  description: >
+    Analyze the raw JSON data provided by the data_collector. Identify and cross-reference products that are the same across the different websites. Normalize the product names and create a unified list, noting which products correspond to each entry.
+  expected_output: >
+    A JSON object representing a unified product list. Each entry in the list should contain a standardized product name and a sub-object or array listing the corresponding product details (prices, original names) from each of the source websites.
+  agent: data_analyst
+
+data_formatting_task:
+  description: >
+    Take the unified JSON product data from the previous agent and format it into a CSV file. The CSV must have the following columns: "Unified Product Name," "Price on Site 1," "Price on Site 2," "Price on Site 3," and "Confidence Level." Calculate the confidence level based on the similarity of the matched products.
+  expected_output: >
+    A CSV file named "final.csv" containing the final, organized product data as specified. The file should be ready for viewing and sharing.
+  agent: data_formatter
+
+
+
+
+# research_task:
+#   description: >
+#     Conduct a thorough research about {topic}
+#     Make sure you find any interesting and relevant information given
+#     the current year is {current_year}.
+#   expected_output: >
+#     A list with 10 bullet points of the most relevant information about {topic}
+#   agent: researcher
+
+# reporting_task:
+#   description: >
+#     Review the context you got and expand each topic into a full section for a report.
+#     Make sure the report is detailed and contains any and all relevant information.
+#   expected_output: >
+#     A fully fledged report with the main topics, each with a full section of information.
+#     Formatted as markdown without '```'
+#   agent: reporting_analyst
